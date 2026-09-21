@@ -473,3 +473,41 @@ h2{font-size:clamp(38px,6vw,88px);font-weight:600;letter-spacing:-.045em;line-he
   .reveal,.hero .rise{opacity:1;transform:none}
   .marquee-track{animation:none}
 }
+.social-links{
+  display:flex;
+  gap:12px;
+  margin-top:24px;
+}
+
+.social-btn{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  background:var(--soft);
+  border:1px solid var(--line);
+
+  transition:
+    background .25s var(--ease),
+    color .25s var(--ease),
+    transform .25s var(--ease);
+}
+
+.social-btn svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+}
+
+.social-btn:hover{
+  background:var(--ink);
+  color:#fff;
+  transform:translateY(-3px);
+}
+
+.social-btn:active{
+  transform:translateY(-1px) scale(.96);
+}
