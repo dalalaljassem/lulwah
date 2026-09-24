@@ -50,11 +50,14 @@
   
     /* ───────────── Blocks ───────────── */
     const figure = (item, layout, extra) => {
-      const inner = item.src
+      const inner = item.video
+        ? '<video controls playsinline preload="metadata"' + (item.poster ? ' poster="' + esc(item.poster) + '"' : '') + '><source src="' + esc(item.video) + '" type="video/mp4">' + esc(item.alt || '') + '</video>'
+        : item.src
         ? '<img src="' + esc(item.src) + '" alt="' + esc(item.alt) + '" loading="lazy" decoding="async">'
         : '<div class="art" role="img" aria-label="' + esc(item.alt || 'Placeholder') + '">' +
           ((ART[item.art] || (() => ''))()) + '</div>';
-      return '<figure class="media ' + layout + ' ' + (extra || '') + '" data-tone="' + esc(item.tone || 'dark') + '">' + inner + '</figure>';
+      const cls = 'media ' + layout + ' ' + (extra || '') + (item.bare ? ' bare' : '');
+      return '<figure class="' + cls.replace(/\s+/g, ' ').trim() + '" data-tone="' + esc(item.tone || 'dark') + '">' + inner + '</figure>';
     };
   
     const renderBlock = b => {
@@ -62,26 +65,30 @@
         return '<section class="prose rv"><h2>' + esc(b.title) + '</h2>' +
           (b.body || []).map(t => '<p>' + esc(t) + '</p>').join('') +
           (b.list ? '<ol>' + b.list.map(t => '<li>' + esc(t) + '</li>').join('') + '</ol>' : '') +
+          (b.tail ? '<p>' + esc(b.tail) + '</p>' : '') +
           '</section>';
       }
       if (b.layout === 'pair') {
-        return '<div class="pair rv mw">' + b.items.slice(0, 2).map(i => figure(i, 'pair')).join('') + '</div>';
+        const wrapCls = 'pair rv mw' + (b.itemClass ? ' ' + b.itemClass : '');
+        return '<div class="' + wrapCls + '">' + b.items.slice(0, 2).map(i => figure(i, 'pair', b.itemClass)).join('') + '</div>';
       }
       return '<div class="rv mw">' + figure(b.items[0], 'full') + '</div>';
     };
   
     /* ───────────── Page ───────────── */
     const isExternal = /^https?:/i.test(p.live || '');
-    const meta = [['Role', p.role], ['Client', p.client], ['Year', p.year]].map(m =>
+    const metaPairs = p.meta || [['Role', p.role], ['Client', p.client], ['Year', p.year]];
+    const meta = metaPairs.map(m =>
       '<div class="meta-card"><span class="pill">' + esc(m[0]) + '</span><p>' + esc(m[1]) + '</p></div>').join('');
     const live = p.live
       ? '<a class="meta-card live" href="' + esc(p.live) + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') + '>Live preview <span aria-hidden="true">↗</span></a>'
       : '';
+    const metaCellCount = metaPairs.length + (p.live ? 1 : 0);
   
     root.innerHTML =
       '<header class="head">' +
         '<div class="title-card rise" style="--d:.05s"><h1>' + esc(p.title) + '</h1><p>' + esc(p.subtitle) + '</p></div>' +
-        '<div class="meta rise' + (p.live ? '' : ' n3') + '" style="--d:.15s">' + meta + live + '</div>' +
+        '<div class="meta rise' + (metaCellCount === 3 ? ' n3' : '') + '" style="--d:.15s">' + meta + live + '</div>' +
         '<div class="rise" style="--d:.25s">' + figure(p.hero, 'full', 'hero') + '</div>' +
       '</header>' +
       (p.blocks || []).map(renderBlock).join('') +
