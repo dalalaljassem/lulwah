@@ -1,6 +1,4 @@
-/* ──────────────────────────────────────────────────────────────
-   PROJECT CONTENT  ·  edit this file, not project.html
-   ──────────────────────────────────────────────────────────────
+/* PROJECT CONTENT. Edit this file, not project.html.
    Each project renders into the same case-study template.
 
    Media: every image slot has `art` (a built-in placeholder) and
@@ -18,8 +16,7 @@
      'phones-1' 'phones-2' 'phones-3' 'phone-crop-a' 'phone-crop-b'
      'phone-tilt' 'eco' 'bento'
 
-   `live`: URL for the lime "Live preview" card. Leave '' to hide it.
-   ────────────────────────────────────────────────────────────── */
+   `live`: URL for the lime "Live preview" card. Leave '' to hide it. */
 
    window.PROJECTS = [
     {
@@ -44,7 +41,7 @@
           type: 'text',
           title: 'Rethinking the everyday screens.',
           body: [
-            'One of the first things I tackled was the home screen and core navigation. The previous UI worked, but it felt plain — everything looked the same, and finding things quickly wasn\'t easy. The redesign focuses on a clearer, warmer welcome, more personalised content and faster access to the services people use most.'
+            'One of the first things I tackled was the home screen and core navigation. The previous UI worked, but it felt plain. Everything looked the same, and finding things quickly wasn\'t easy. The redesign focuses on a clearer, warmer welcome, more personalised content and faster access to the services people use most.'
           ]
         },
         { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/ui-before-after.jpg', alt: 'Old UI compared with the redesigned KFH Online home screen' }] },
@@ -55,9 +52,9 @@
             'Beyond the core redesign, I designed a set of features that make everyday banking feel more personal:'
           ],
           list: [
-            'Digital card covers — seasonal Visa card designs customers can choose and update from the app, from Kuwait-inspired art to sports and national day themes.',
-            'Home screen shortcuts — a KFH widget for sending money in one tap, without opening the app first.',
-            'Fahad AI — an in-app guide, introduced through Fahad and Reem, that helps customers discover KFH products and services more easily.'
+            'Digital card covers: seasonal Visa card designs customers can choose and update from the app, from Kuwait-inspired art to sports and national day themes.',
+            'Home screen shortcuts: a KFH widget for sending money in one tap, without opening the app first.',
+            'Fahad AI: an in-app guide, introduced through Fahad and Reem, that helps customers discover KFH products and services more easily.'
           ]
         },
         { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/card-covers.jpg', alt: 'Digital card cover picker with seasonal Visa card designs' }] },
@@ -103,7 +100,7 @@
       meta: [
         ['Role', 'Partner'],
         ['Focus', 'Product Design & Strategy'],
-        ['Year', '2023 – Present'],
+        ['Year', '2023-Present'],
         ['Status', 'Live & evolving']
       ],
       live: '',
@@ -117,9 +114,9 @@
             'My role goes beyond designing screens. I work on defining Gen\'s product direction, improving existing experiences and creating a consistent identity across every customer touchpoint.'
           ],
           list: [
-            'Shape the vision — defining product priorities, planning future experiences and building a strategy around the evolving needs of students, parents and schools.',
-            'Design the experience — turning ideas into user journeys, interfaces and prototypes across the mobile app and point-of-sale experience.',
-            'Bring it to life — working closely with the team to launch features, refine the product and maintain a consistent experience across digital and physical touchpoints.'
+            'Shape the vision: defining product priorities, planning future experiences and building a strategy around the evolving needs of students, parents and schools.',
+            'Design the experience: turning ideas into user journeys, interfaces and prototypes across the mobile app and point-of-sale experience.',
+            'Bring it to life: working closely with the team to launch features, refine the product and maintain a consistent experience across digital and physical touchpoints.'
           ]
         },
         {
@@ -200,9 +197,9 @@
             'Not everything I create starts with a problem to solve. Sometimes it\'s a new idea, a technique I want to learn or something I saw that made me think, \'I want to try that.\''
           ],
           list: [
-            'Get inspired — collecting ideas from everyday life, design, technology, art and anything that catches my eye.',
-            'Experiment — trying new tools, learning techniques and exploring ideas without worrying too much about getting everything perfect.',
-            'Make something — turning experiments into little projects, whether it\'s a working app, a finished painting or something handmade.'
+            'Get inspired: collecting ideas from everyday life, design, technology, art and anything that catches my eye.',
+            'Experiment: trying new tools, learning techniques and exploring ideas without worrying too much about getting everything perfect.',
+            'Make something: turning experiments into little projects, whether it\'s a working app, a finished painting or something handmade.'
           ],
           tail: 'My creative interests take me in different directions. Here are some of the things I\'ve been exploring.'
         },

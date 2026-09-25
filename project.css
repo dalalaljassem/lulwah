@@ -1,4 +1,4 @@
-/* ───────────────────────── Tokens ───────────────────────── */
+/* Tokens */
 :root {
   --bg: #ffffff;
   --card: #f3f3f3;
@@ -59,7 +59,7 @@ img {
   padding-inline: var(--gutter)
 }
 
-/* ───────────────────────── Nav ───────────────────────── */
+/* Nav */
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -107,7 +107,7 @@ img {
   color: var(--ink)
 }
 
-/* ───────────────────────── Case layout ───────────────────────── */
+/* Case layout */
 .case {
   width: 100%;
   max-width: calc(var(--max) + var(--gutter)*2);
@@ -334,7 +334,7 @@ div.pair.tight .media.bare {
   --panel: #f4ead8
 }
 
-/* Bare media: the image already stands on its own (its own shadow/edges) —
+/* Bare media: the image already stands on its own (its own shadow/edges),
    no panel background, no crop, no forced aspect-ratio. */
 .media video {
   width: 100%;
@@ -849,7 +849,7 @@ div.pair.tight .media.bare {
   color: var(--mute);
 }
 
-/* ───────────────────────── Motion ───────────────────────── */
+/* Motion */
 .rise {
   animation: rise .9s var(--ease) both;
   animation-delay: var(--d, 0s)
@@ -871,7 +871,7 @@ div.pair.tight .media.bare {
   transform: translateY(28px)
 }
 
-/* ───────────────────────── Responsive ───────────────────────── */
+/* Responsive */
 @media (max-width:820px) {
 
   .meta,
