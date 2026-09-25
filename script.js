@@ -6,9 +6,7 @@
       Math.min(b, Math.max(a, v));
   
     $('#yr').textContent = new Date().getFullYear();
-  
-    /* Sketch / Figma style dot canvas */
-  
+    
     const canvas = $('#dots');
     const ctx = canvas.getContext('2d');
   
@@ -143,7 +141,6 @@
   
     sizeCanvas();
   
-    /* Scroll effects */
   
     const nav = $('#nav');
     const heroMain = $('#heroMain');
@@ -286,7 +283,6 @@
   
     onScroll();
   
-    /* Reveal animations */
   
     const io =
       new IntersectionObserver(
@@ -323,7 +319,7 @@
         el => io.observe(el)
       );
   
-    /* Carousel */
+
   
     const track = $('#track');
     const prev = $('#prev');
@@ -458,7 +454,6 @@
       }
     );
   
-    /* Mouse drag */
   
     let down = false;
     let moved = 0;

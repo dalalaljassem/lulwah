@@ -1,5 +1,4 @@
-/* Renders one case study from projects.js into project.html.
-   URL format:  project.html?p=kfh   (kfh | gen | branding) */
+
    (() => {
     const list = window.PROJECTS || [];
     const slug = new URLSearchParams(location.search).get('p');
@@ -7,8 +6,6 @@
     const root = document.getElementById('case');
     const yr = document.getElementById('yr');
     if (yr) yr.textContent = new Date().getFullYear();
-  
-    // Unknown or missing project → back to the work section
     if (at < 0) { location.replace('index.html#work'); return; }
   
     document.documentElement.classList.add('js');
@@ -18,7 +15,6 @@
     const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => (
       { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   
-    /* Placeholder art (replaced when `src` is set) */
     const bl = (c = '') => '<i class="bl ' + c + '"></i>';
     const row = (a, b) => '<div class="row"><i></i><div class="col">' + bl(a) + bl(b) + '</div>' + bl('amt') + '</div>';
     const field = '<div class="field">' + bl('w30 s') + bl('w60') + '</div>';
@@ -48,7 +44,6 @@
         '<div class="b2"><i></i><i></i><i></i><i></i></div><div class="b3"></div></div>'
     };
   
-    /* Blocks */
     const figure = (item, layout, extra) => {
       const inner = item.video
         ? '<video controls playsinline preload="metadata"' + (item.poster ? ' poster="' + esc(item.poster) + '"' : '') + '><source src="' + esc(item.video) + '" type="video/mp4">' + esc(item.alt || '') + '</video>'
@@ -75,7 +70,6 @@
       return '<div class="rv mw">' + figure(b.items[0], 'full') + '</div>';
     };
   
-    /* Page */
     const isExternal = /^https?:/i.test(p.live || '');
     const metaPairs = p.meta || [['Role', p.role], ['Client', p.client], ['Year', p.year]];
     const meta = metaPairs.map(m =>
@@ -101,10 +95,8 @@
     const md = document.getElementById('metaDesc');
     if (md) md.setAttribute('content', p.subtitle + ' A case study by Lulwah AlDyouly, Senior UX/UI Designer in Kuwait.');
   
-    // Placeholder links (#) shouldn't jump to the top
     root.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click', e => e.preventDefault()));
   
-    /* Motion */
     const nav = document.getElementById('nav');
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
     window.addEventListener('scroll', onScroll, { passive: true });

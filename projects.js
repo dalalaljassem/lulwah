@@ -1,23 +1,3 @@
-/* PROJECT CONTENT. Edit this file, not project.html.
-   Each project renders into the same case-study template.
-
-   Media: every image slot has `art` (a built-in placeholder) and
-   an optional `src`. To use a real image, set `src: 'assets/kfh/01.jpg'`
-   and `alt`. As soon as `src` is set, the placeholder is replaced.
-
-   Media layouts:
-     layout: 'full'  → one wide panel (16:9-ish), 1 item
-     layout: 'pair'  → two portrait panels side by side, 2 items
-
-   Panel tones (background behind your image / placeholder):
-     'dark' | 'light' | 'warm'
-
-   Placeholder art names:
-     'phones-1' 'phones-2' 'phones-3' 'phone-crop-a' 'phone-crop-b'
-     'phone-tilt' 'eco' 'bento'
-
-   `live`: URL for the lime "Live preview" card. Leave '' to hide it. */
-
    window.PROJECTS = [
     {
       slug: 'kfh',
