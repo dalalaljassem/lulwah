@@ -1,7 +1,7 @@
    window.PROJECTS = [
     {
       slug: 'kfh',
-      title: 'KFH',
+      title: 'KFH Online Banking App',
       subtitle: 'Redesigning KFH Online, Kuwait Finance House\'s mobile banking app.',
       role: 'Senior UX/UI Designer',
       client: 'Kuwait Finance House',
@@ -17,6 +17,8 @@
             'KFH Online is Kuwait Finance House\'s mobile banking app. My work covers redesigning core flows, adding new customer-facing features like card customisation and AI-guided discovery, and keeping the experience consistent as the app grows across everyday banking, cards, transfers and KFH Private.'
           ]
         },
+        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/ui-before-after.jpg', alt: 'Old UI compared with the redesigned KFH Online home screen' }] },
+        
         {
           type: 'text',
           title: 'Rethinking the everyday screens.',
@@ -24,21 +26,26 @@
             'One of the first things I tackled was the home screen and core navigation. The previous UI worked, but it felt plain. Everything looked the same, and finding things quickly wasn\'t easy. The redesign focuses on a clearer, warmer welcome, more personalised content and faster access to the services people use most.'
           ]
         },
-        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/ui-before-after.jpg', alt: 'Old UI compared with the redesigned KFH Online home screen' }] },
+        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/send-money-widget.jpg', alt: 'Old UI compared with the redesigned KFH Online home screen' }] },
+        
         {
           type: 'text',
-          title: 'Small features, considered details.',
+          title: 'Beyond the redesign.',
           body: [
-            'Beyond the core redesign, I designed a set of features that make everyday banking feel more personal:'
+            'Beyond the core revamp, I worked on simplifying complex banking journeys, introducing more personalized experiences and exploring new ways for families to bank together.'
           ],
+        
           list: [
-            'Digital card covers: seasonal Visa card designs customers can choose and update from the app, from Kuwait-inspired art to sports and national day themes.',
-            'Home screen shortcuts: a KFH widget for sending money in one tap, without opening the app first.',
-            'Fahad AI: an in-app guide, introduced through Fahad and Reem, that helps customers discover KFH products and services more easily.'
+            'KYC Flow: Turning one of the longest and most complex banking processes into a simpler, clearer and more intuitive experience, reducing unnecessary steps and making it easier for customers to update their information.',
+            'Financial Services: Redesigning financing journeys, from requesting finance to managing installments and rescheduling payments, making complex financial processes easier to understand and navigate.',
+            'Card Services: Improving everyday card management, from viewing and organizing cards to accessing essential services, all within a more seamless experience.',
+            'Family Banking: Exploring a connected banking experience for parents and children, with shared access, parental controls and tools that help families manage their finances together.',
+            'Personalized App Themes: Creating distinct experiences for different customer segments. Personal and Private Banking themes are currently live, with more banking tiers coming soon.',
+            'iOS & Android Widgets: Designing home screen widgets that bring everyday banking closer to customers, with quick access to essential services like sending money, without having to open the app first.'
           ]
         },
         { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/card-covers.jpg', alt: 'Digital card cover picker with seasonal Visa card designs' }] },
-        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/send-money-widget.jpg', alt: 'KFH Send Money iOS home screen widget' }] },
+        //{ type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/kfh/send-money-widget.jpg', alt: 'KFH Send Money iOS home screen widget' }] },
         {
           type: 'text',
           title: 'A premium experience: KFH Private.',
@@ -126,7 +133,7 @@
           ]
         },
         { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/gen/pos.jpg', alt: 'Gen POS tablet with scan ID, tap to pay and cash options, next to a student ID card' }] },
-        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/gen/pos-grid.jpg', alt: 'Gen POS product selection screen with categories and billing total' }] },
+        // { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/gen/pos-grid.jpg', alt: 'Gen POS product selection screen with categories and billing total' }] },//
         {
           type: 'text',
           title: '3. More than an app. A brand.',
@@ -160,7 +167,7 @@
       ],
       live: '',
       category: 'Personal · Creative exploration',
-      hero: { art: 'bento', tone: 'warm', bare: true, src: 'assets/lulu.png', alt: 'Two handmade crochet bunnies I made, sitting side by side' },
+      hero: { art: 'bento', tone: 'warm', bare: true, src: 'assets/offtheclock/Sold.png', alt: 'Two handmade crochet bunnies I made, sitting side by side' },
       blocks: [
         {
           type: 'text',
@@ -170,6 +177,9 @@
             'This is my little corner of the internet for everything I enjoy making.'
           ]
         },
+        //doodleme.png
+        { type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, src: 'assets/offtheclock/doodleme.png', alt: 'Gen Instagram profile' }] },
+        
         {
           type: 'text',
           title: 'Curiosity is my creative process.',
@@ -186,6 +196,11 @@
         {
           type: 'text',
           title: '1. Design Playground',
+          body: [ null ]
+        },{ type: 'media', layout: 'full', items: [{ art: '', tone: 'light', bare: true, video: 'assets/offtheclock/playground2.mp4', poster: 'assets/offtheclock/playground2-poster.jpg', alt: 'A tour of my SwiftUI playground app, ending on a experimentnal projects' }] },
+        {
+          type: 'text',
+          title: '',
           body: [
             'SwiftUI & creative coding.',
             'My very own playground for experimenting with native Apple experiences. I build small apps, explore SwiftUI, test animations and turn random design ideas into working prototypes. It\'s where I get to be both the designer and the developer.',
